@@ -114,6 +114,7 @@ st.markdown(
     unsafe_allow_html=True
 )
 
+# Personal Details Section
 st.markdown(
     "<h2 class='section-title'>👤 Personal Details</h2>",
     unsafe_allow_html=True
@@ -174,6 +175,7 @@ st.sidebar.info("""
 - Streamlit
 """)
 
+# Academic Details Section
 st.markdown(
     "<h2 class='section-title'>📚 Academic Details</h2>",
     unsafe_allow_html=True
@@ -215,6 +217,7 @@ with col2:
         0, 20, 10
     )
 
+# Family Details Section
 st.markdown(
     "<h2 class='section-title'>🏠 Family Details</h2>",
     unsafe_allow_html=True
@@ -252,6 +255,7 @@ famrel = st.slider(
     3
 )
 
+# Llifestyle Details Section
 st.markdown(
     "<h2 class='section-title'>🎯 Lifestyle Details</h2>",
     unsafe_allow_html=True
@@ -318,6 +322,7 @@ with col2:
         ["No","Yes"]
     )
 
+# Parents' Occupation Section
 st.markdown(
     "<h2 class='section-title'>👨‍👩‍👧 Parents' Occupation</h2>",
     unsafe_allow_html=True
@@ -353,6 +358,7 @@ with col1:
         ["course","home","other","reputation"]
     )
 
+# Predict Button
 st.markdown("---")
 
 predict = st.button("🎯 Predict Final Grade")   
@@ -379,7 +385,7 @@ if predict:
     internet_yes = 1 if internet == "Yes" else 0
     romantic_yes = 1 if romantic == "Yes" else 0
 
-        # Mother's Job
+    # Mother's Job
     Mjob_health = 1 if Mjob == "health" else 0
     Mjob_other = 1 if Mjob == "other" else 0
     Mjob_services = 1 if Mjob == "services" else 0
@@ -396,6 +402,7 @@ if predict:
     reason_other = 1 if reason == "other" else 0
     reason_reputation = 1 if reason == "reputation" else 0
 
+    # After encoding input in one Dataframe
     input_data = pd.DataFrame([{
         "age": age,
         "Medu": Medu,
@@ -465,6 +472,7 @@ if predict:
 
     st.markdown("---")
 
+# Footer
 st.markdown("""
 <div style="
     text-align:center;
